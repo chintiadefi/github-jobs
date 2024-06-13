@@ -18,6 +18,8 @@ Route::get('/', function () {
     return view('dashboard');
 });
 
+Route::get('/{id}', [Jobs::class, 'detail']);
+
 Route::get('/', [Jobs::class, 'list']);
 Route::post('/', [Jobs::class, 'list']);
 

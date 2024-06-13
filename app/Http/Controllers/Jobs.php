@@ -27,6 +27,12 @@ class Jobs extends Controller
         return view('dashboard', ['jobs' => $list]);
     }
 
+    public function detail($id)
+    {
+        $detail = DB::table('jobs')->where('id', $id)->first();
+        return view('detail', compact('detail'));
+    }
+
     public function add()
     {
         return view('/add-job');

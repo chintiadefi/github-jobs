@@ -23,7 +23,7 @@
     </nav>
     <script type="text/javascript">
         const thisYear = new Date().getFullYear();
-        document.getElementById("footer").innerHTML = `Ant Design ©${thisYear}`;
+        document.getElementById("footer").innerHTML = `Github Jobs ©${thisYear}`;
     </script>
     <script src="https://cdn.tiny.cloud/1/sga86i1vk08zk8u6ggrauvn7xrm5lzn7kisc6o5t5up2wyht/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
     <script>
