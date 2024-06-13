@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Jobs;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +15,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('dashboard');
 });
+
+Route::get('/', [Jobs::class, 'list']);
+Route::post('/', [Jobs::class, 'list']);
+
+Route::get('/add-job', [Jobs::class, 'add']);
+Route::post('/job', [Jobs::class, 'store']);
+
