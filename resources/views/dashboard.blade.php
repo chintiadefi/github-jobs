@@ -61,7 +61,7 @@ function daysPassed($targetDate) {
         @forelse ($jobs as $key => $item)
         <div class="d-flex justify-content-between">
             <div>
-                <a href="/{{$item -> id}}">
+                <a href="/detail/{{$item -> id}}">
                     <h5 class="text-primary">{{$item -> title}}</h5>
                 </a>
                 <p><span class="text-secondary">{{$item -> company}}</span> - <span class="text-success">{{$item -> type === 1 ? 'Full Time' : 'Contract'}}</span></p>
@@ -77,6 +77,8 @@ function daysPassed($targetDate) {
         @endforelse
         {{ $jobs -> links() }}
     </div>
+    <x-notify::notify />
+    @notifyJs
     <script>
         var urlParams = new URLSearchParams(window.location.search);
         var full_time = urlParams.get('full_time');
